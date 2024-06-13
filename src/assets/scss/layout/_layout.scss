@@ -1,0 +1,95 @@
+main {
+  flex: 1;
+  margin: 0;
+  width: 100vw;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner {
+  background-image: linear-gradient(
+      to left,
+      rgba(143, 127, 201, 0.384),
+      rgba(155, 177, 211, 0.5)
+    ),
+    url("/assets/images/download.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 600px) {
+    background-size: cover;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-area {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  &_content {
+    color: white;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    width: 50%;
+    text-align: center;
+    line-height: 1.5em;
+    
+    h2 {
+      line-height: 3em;
+    }
+
+    &:hover {
+      transition-duration: 0.5s ease-in;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+      padding: 0;
+      line-height: 1em;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 40px;
+    width: 100%;
+  }
+}
+
+button {
+  margin-top: 20px;
+  min-width: 120px;
+  min-height: 40px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  background-color: rgb(80 142 229);
+  color: $white-color;
+  border: none;
+  cursor: pointer;
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  &:hover {
+    color: black;
+    background-color: rgb(58, 74, 168);
+  }
+}
