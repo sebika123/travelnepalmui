@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Drawer, IconButton, List, ListItem, ListItemText, Collapse, ListSubheader } from '@mui/material';
+import { Box, Drawer, IconButton, List, ListItem, ListItemText, ListItemButton,Collapse, ListSubheader } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import logo from '../assets/images/travel-logo.png';
@@ -31,7 +31,7 @@ const Navbar = () => {
     <header className="header">
       <nav id="menu">
         <Box id="hamburger" onClick={toggleNav}>
-          <IconButton onClick={toggleDrawer} sx={{ color: 'white' }}>
+          <IconButton onClick={toggleDrawer} sx={{ color: 'black' }}>
             <MenuIcon />
           </IconButton>
           Menu
@@ -40,71 +40,71 @@ const Navbar = () => {
           <img src={logo} className="travel-logo" alt="logo" />
           <ListItem component="li"><a href="/">Home</a></ListItem>
           <ListItem component="li">
-            <a href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'submenu-1')}>
+            <ListItemButton component="a" href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'submenu-1')}>
               Place <span className="drop-icon">▾</span>
-            </a>
-            <ul className={`sub-menu ${openSubmenus['submenu-1'] ? 'open' : ''}`} id="submenu-1">
-              <li><a href="/">Himal</a></li>
-              <li>
-                <a href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'submenu-2')}>
+            </ListItemButton>
+            <List component="ul" className={`sub-menu ${openSubmenus['submenu-1'] ? 'open' : ''}`} id="submenu-1">
+              <ListItem component="li"><a href="/">Himal</a></ListItem >
+              <ListItem component="li">
+                <ListItemButton component="a" href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'submenu-2')}>
                   Hilly <span className="drop-icon"></span>
-                </a>
-                <ul className={`sub-menu ${openSubmenus['submenu-2'] ? 'open' : ''}`} id="submenu-2">
-                  <li>
-                    <a href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'submenu-3')}>
+                </ListItemButton>
+                <List component="ul" className={`sub-menu ${openSubmenus['submenu-2'] ? 'open' : ''}`} id="submenu-2">
+                  <ListItem component="li">
+                    <ListItemButton component="a" href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'submenu-3')}>
                       Ktm <span className="drop-icon"></span>
-                    </a>
-                    <ul className={`sub-menu ${openSubmenus['submenu-3'] ? 'open' : ''}`} id="submenu-3">
-                      <li><a href="/">Baneshwor</a></li>
-                      <li><a href="/">Koteswor</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="/">PKr</a></li>
-                  <li><a href="/">Bkt</a></li>
-                </ul>
-              </li>
-              <li><a href="/">Terai</a></li>
-            </ul>
+                    </ListItemButton>
+                    <List component="ul"  className={`sub-menu ${openSubmenus['submenu-3'] ? 'open' : ''}`} id="submenu-3">
+                      <ListItem component="li"><a href="/">Baneshwor</a></ListItem >
+                      <ListItem component="li"><a href="/">Koteswor</a></ListItem >
+                    </List>
+                  </ListItem >
+                  <ListItem component="li"><a href="/">PKr</a></ListItem >
+                  <ListItem component="li"><a href="/">Bkt</a></ListItem >
+                </List>
+              </ListItem>
+              <ListItem component="li"><a href="/">Terai</a></ListItem >
+            </List>
           </ListItem>
-          <li><a href="/">About us</a></li>
+          <ListItem component="li"><a href="/">About us</a></ListItem >
         </List>
       </nav>
       {navOverlayVisible && (
-        <div id="nav-overlay" onClick={toggleNav}>
-          <div className="nav-content">
-            <ul className="overlay-menu">
-              <li><a href="/">Home</a></li>
-              <li>
-                <a href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'overlay-submenu-1')}>
+        <Box id="nav-overlay" onClick={toggleNav}>
+          <Box className="nav-content">
+            <List component="ul" className="overlay-menu">
+              <ListItem component="li"><a href="/">Home</a></ListItem>
+              <ListItem component="li">
+                <ListItemButton component="a" href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'overlay-submenu-1')}>
                   Place <span className="drop-icon">▾</span>
-                </a>
-                <ul className={`sub-menu ${openSubmenus['overlay-submenu-1'] ? 'open' : ''}`} id="overlay-submenu-1">
-                  <li><a href="/">Himal</a></li>
-                  <li>
-                    <a href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'overlay-submenu-2')}>
+                </ListItemButton>
+                <List component="ul" className={`sub-menu ${openSubmenus['overlay-submenu-1'] ? 'open' : ''}`} id="overlay-submenu-1">
+                  <ListItem component="li"><a href="/">Himal</a></ListItem>
+                  <ListItem component="li">
+                    <ListItemButton component="a" href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'overlay-submenu-2')}>
                       Hilly <span className="drop-icon">▾</span>
-                    </a>
-                    <ul className={`sub-menu ${openSubmenus['overlay-submenu-2'] ? 'open' : ''}`} id="overlay-submenu-2">
-                      <li>
-                        <a href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'overlay-submenu-3')}>
+                    </ListItemButton>
+                    <List component="ul" className={`sub-menu ${openSubmenus['overlay-submenu-2'] ? 'open' : ''}`} id="overlay-submenu-2">
+                      <ListItem component="li">
+                        <ListItemButton component="a" href="javascript:void(0);" onClick={(e) => toggleSubMenu(e, 'overlay-submenu-3')}>
                           Ktm <span className="drop-icon">▾</span>
-                        </a>
-                        <ul className={`sub-menu ${openSubmenus['overlay-submenu-3'] ? 'open' : ''}`} id="overlay-submenu-3">
-                          <li><a href="/">Baneshwor</a></li>
-                          <li><a href="/">Koteswor</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="/">PKr</a></li>
-                      <li><a href="/">Bkt</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="/">Terai</a></li>
-                </ul>
-              </li>
-              <li><a href="/">About us</a></li>
-            </ul>
-          </div>
-        </div>
+                        </ListItemButton>
+                        <List component="ul" className={`sub-menu ${openSubmenus['overlay-submenu-3'] ? 'open' : ''}`} id="overlay-submenu-3">
+                          <ListItem component="li"><a href="/">Baneshwor</a></ListItem>
+                          <ListItem component="li"><a href="/">Koteswor</a></ListItem>
+                        </List>
+                      </ListItem>
+                      <ListItem component="li"><a href="/">PKr</a></ListItem>
+                      <ListItem component="li"><a href="/">Bkt</a></ListItem>
+                    </List>
+                  </ListItem>
+                  <ListItem component="li"><a href="/">Terai</a></ListItem>
+                </List>
+              </ListItem>
+              <ListItem component="li"><a href="/">About us</a></ListItem>
+            </List>
+          </Box>
+        </Box>
       )}
       <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer}>
         <Box sx={{ width: 250 }} role="presentation">
