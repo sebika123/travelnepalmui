@@ -123,7 +123,7 @@ const Navbar = () => {
             </ListItem>
             <Collapse in={openSubmenus['drawer-submenu-1']} timeout="auto" unmountOnExit>
               <List disablePadding>
-                <ListItem button onClick={(e) => toggleSubMenu(e, 'drawer-himal')}>
+                <ListItem    onClick={(e) => toggleSubMenu(e, 'drawer-himal')}>
                   <ListItemText primary="Himal" />
                 </ListItem>
                 <ListItem   onClick={(e) => toggleSubMenu(e, 'drawer-submenu-2')}>

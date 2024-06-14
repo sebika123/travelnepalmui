@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button, Container } from '@mui/material';
-// import './layout.scss';
+import { Button, Container,Box } from '@mui/material';
+
 
 const Banner = () => {
   return (
     <main>
-      <section className="banner">
+      <Box className="banner">
         <Container className="container">
           <div className="text-area">
             <section className="text-area_content">
@@ -22,7 +22,7 @@ const Banner = () => {
             </section>
           </div>
         </Container>
-      </section>
+      </Box>
     </main>
   );
 };

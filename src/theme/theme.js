@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-
+import { moveInLeft, moveInBottom } from './customTheme/animation';
 const theme = createTheme({
   palette: {
     primary: {
@@ -12,6 +12,16 @@ const theme = createTheme({
   typography: {
     h6: {
       fontSize: '1.25rem',
+    },
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          '@global': {
+            '@keyframes moveInLeft': moveInLeft,
+            '@keyframes moveInBottom': moveInBottom,
+          },
+        },
+      },
     },
   },
 });
