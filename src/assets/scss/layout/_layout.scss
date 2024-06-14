@@ -74,7 +74,7 @@ main {
   }
 }
 
-button {
+.button {
   margin-top: 20px;
   min-width: 120px;
   min-height: 40px;
@@ -83,6 +83,8 @@ button {
   background-color: rgb(80 142 229);
   color: $white-color;
   border: none;
+  // margin-top:30px;
+
   cursor: pointer;
   animation-name: moveInBottom;
   animation-duration: 1s;

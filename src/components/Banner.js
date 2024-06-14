@@ -7,7 +7,7 @@ const Banner = () => {
     <main>
       <Box className="banner">
         <Container className="container">
-          <div className="text-area">
+          <Box className="text-area">
             <section className="text-area_content">
               <h2>Welcome to Nepal.</h2>
               <p>
@@ -16,11 +16,11 @@ const Banner = () => {
                 amet facere perferendis minima, maiores voluptatem tenetur
                 inventore fugiat voluptatibus nemo! Iusto, eligendi!
               </p>
-              <Button variant="contained" className="explore-button">
+              <Button variant="contained" className="button"sx={{my:3}}>
                 Explore..
               </Button>
             </section>
-          </div>
+          </Box>
         </Container>
       </Box>
     </main>

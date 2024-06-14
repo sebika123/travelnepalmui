@@ -1,28 +1,47 @@
 import React from 'react';
 import { Container, Grid, Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton } from '@mui/material';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import PauseIcon from '@mui/icons-material/Pause';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import i1 from "../assets/images/i1.jpg";
 import i2 from "../assets/images/i2.webp"
+import videobg from "../assets/videos/video.mp4"
+
+
+const theme = createTheme({
+  components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          '&.story': {
+            maxWidth: '1200px', 
+            width: '100%',
+          },
+          
+        },
+      },
+    },
+  },
+});
+
 
 const Stories = () => {
   return (
     <section className="section-stories">
-      <div className="bg-video">
-        <video className="bg-video-content" autoPlay muted loop>
-          <source src="../assets/videos/video.mp4" type="video/mp4" />
-          <source src="../assets/videos/video.webm" type="video/webm" />
+      <Box className="bg-video">
+        <video className="bg-video-content" src={videobg}  autoPlay muted loop>
+   
+          <video src="../assets/videos/video.webm" type="video/webm" />
           Your browser is not supported!
         </video>
-      </div>
+      </Box>
 
-      <div className="story-heading">
+      <Box className="story-heading">
         <Typography variant="h4" className="heading-secondary">We make people genuinely happy</Typography>
-      </div>
+      </Box>
 
-      <Container className="container">
+     <ThemeProvider theme={theme}>
+     <Container className="container">
         <Grid container spacing={4} className="row">
-          <Grid item xs={12} md={6} className="story">
+          <Grid item xs={12} md={10} className="story">
             <Card className="story-card">
               <Box className="story-shape">
                 <CardMedia
@@ -43,7 +62,7 @@ const Stories = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6} className="story">
+          <Grid item xs={12} md={10} className="story">
             <Card className="story-card">
               <Box className="story-shape">
                 <CardMedia
@@ -66,6 +85,7 @@ const Stories = () => {
           </Grid>
         </Grid>
       </Container>
+     </ThemeProvider>
     </section>
   );
 };

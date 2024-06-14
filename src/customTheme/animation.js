@@ -1,7 +1,7 @@
 
-import { keyframes } from '@emotion/react';
+import { keyframes } from 'styled-components';
 
-export const moveInLeft = keyframes`
+const moveInLeft = keyframes`
   0% {
     opacity: 0;
     transform: translateX(-10rem);
@@ -15,7 +15,7 @@ export const moveInLeft = keyframes`
   }
 `;
 
-export const moveInBottom = keyframes`
+const moveInBottom = keyframes`
   0% {
     opacity: 0;
     transform: translateY(3rem);
@@ -25,3 +25,10 @@ export const moveInBottom = keyframes`
     transform: translate(0);
   }
 `;
+
+export const theme = {
+  animations: {
+    moveInLeft,
+    moveInBottom,
+  },
+};
