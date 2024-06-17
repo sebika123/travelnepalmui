@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Box, Typography, List, ListItem, Link as MuiLink } from '@mui/material';
+import { Container,  Box, List, ListItem, Link as MuiLink } from '@mui/material';
 import { styled } from '@mui/system';
 import logo from '../assets/images/travel-logo.png';
 
@@ -9,11 +9,12 @@ const StyledLink = styled(MuiLink)(({ theme }) => ({
   textDecoration: 'none',
   fontWeight: 'bold',
   '&:hover': {
-    textDecoration: 'underline',
+    // textDecoration: 'underline',
     color: theme.palette.primary.dark,
   },
   '&:active': {
     color: theme.palette.primary.light,
+    textDecoration: 'underline'
   },
 }));
 

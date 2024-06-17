@@ -6,10 +6,13 @@ const Features = () => {
   return (
     <section className="section-features">
       <Container className="container">
-        <Box container spacing={4} className="row">
-          <Box item xs={12} sm={6} md={3} className="feature-card">
+        <Box  className="row">
+          <Box className="feature-card">
             <Box className="feature-box" textAlign="center">
-              <Box component="i" className="feature-box-icon icon-basic-world"></Box>
+              <Box
+                component="i"
+                className="feature-box-icon icon-basic-world"
+              ></Box>
               <Typography variant="h6" className="heading-tertiary">
                 Explore the world
               </Typography>
@@ -19,7 +22,7 @@ const Features = () => {
               </Typography>
             </Box>
           </Box>
-          <Box item xs={12} sm={6} md={3} className="feature-card">
+          <Box className="feature-card">
             <Box className="feature-box" textAlign="center">
               <i className="feature-box-icon icon-basic-compass"></i>
               <Typography variant="h6" className="heading-tertiary">

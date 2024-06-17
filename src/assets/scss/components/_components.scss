@@ -64,6 +64,7 @@
       padding: 1em;
       // display: block;
       transition: color 0.125s ease-in-out;
+      width: max-content;
 
       &:hover {
         color: black;
@@ -141,4 +142,8 @@
     cursor: pointer;
     color: white;
   }
+}
+
+.nav-item {
+  width: 120px;
 }

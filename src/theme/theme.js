@@ -25,13 +25,8 @@ const globalTheme = createTheme({
     },
 
   },
-  MuiAppBar: {
-    styleOverrides: {
-      root: {
-        backgroundColor: '#333', 
-      },
-    },
-  },
+
+
 });
 
 export default globalTheme;

@@ -1,43 +1,27 @@
-
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import globalTheme from './theme/theme';
-import Navbar from './components/Navbar';
-import Banner from './components/Banner';
-import Features from './components/Features';
-import Stories from './components/Stories';
-import Footer from './components/Footer';
-import { CssBaseline } from '@mui/material';
-
-const storiesTheme = createTheme({
-  typography: {
-    fontFamily: 'Courier New, monospace',
-    body1: {
-      fontSize: '0.875rem',
-      fontWeight: 300,
-    },
-   
-  },
- 
-});
-
+import { ThemeProvider } from "@mui/material/styles";
+import globalTheme from "./theme/theme";
+import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
+import Features from "./components/Features";
+import Stories from "./components/Stories";
+import Footer from "./components/Footer";
+import { CssBaseline } from "@mui/material";
 
 function App() {
   return (
     <ThemeProvider theme={globalTheme}>
-   <CssBaseline/>
+      <CssBaseline />
 
-   <div className="App">
-    <Navbar/>
-    <Banner/>
-    <Features/>
-    <ThemeProvider theme={storiesTheme}>
-    <Stories/>
+      <div className="App">
+        <Navbar />
+        <Banner />
+        <Features />
+
+        <Stories />
+
+        <Footer />
+      </div>
     </ThemeProvider>
-          <Footer />
-      
-    </div>
-     </ThemeProvider>
-  
   );
 }
 
