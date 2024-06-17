@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Grid, Box, Typography, Link as MuiLink } from '@mui/material';
+import { Container, Grid, Box, Typography,List,ListItem, Link as MuiLink } from '@mui/material';
 import logo from '../assets/images/travel-logo.png';
 
 const Footer = () => {
@@ -13,27 +13,27 @@ const Footer = () => {
         />
       </Box>
       <Container>
-        <Grid container spacing={2} className="row">
-          <Grid item xs={12} className="footer-navigation">
-            <Box component="ul" className="footer-list">
-              <li className="footer-item">
-                <MuiLink href="#" className="footer-link">Company</MuiLink>
-              </li>
-              <li className="footer-item">
-                <MuiLink href="#" className="footer-link">Contact us</MuiLink>
-              </li>
-              <li className="footer-item">
-                <MuiLink href="#" className="footer-link">Careers</MuiLink>
-              </li>
-              <li className="footer-item">
-                <MuiLink href="#" className="footer-link">Privacy policy</MuiLink>
-              </li>
-              <li className="footer-item">
-                <MuiLink href="#" className="footer-link">Terms</MuiLink>
-              </li>
-            </Box>
-          </Grid>
-        </Grid>
+        <Box  className="row">
+          <Box className="footer-navigation">
+            <List component="ul" className="footer-list">
+              <ListItem component="li" className="footer-item">
+                <MuiLink href="/" className="footer-link">Company</MuiLink>
+              </ListItem>
+              <ListItem component="li" className="footer-item">
+                <MuiLink href="/" className="footer-link">Contact us</MuiLink>
+              </ListItem>
+              <ListItem component="li" className="footer-item">
+                <MuiLink href="/" className="footer-link">Careers</MuiLink>
+              </ListItem>
+              <ListItem component="li" className="footer-item">
+                <MuiLink href="/" className="footer-link">Privacy policy</MuiLink>
+              </ListItem>
+              <ListItem component="li" className="footer-item">
+                <MuiLink href="/" className="footer-link">Terms</MuiLink>
+              </ListItem>
+            </List>
+          </Box>
+        </Box>
       </Container>
     </footer>
   );

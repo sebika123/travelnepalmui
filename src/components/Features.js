@@ -1,13 +1,13 @@
 import React from "react";
-import { Container, Grid, Box, Typography } from "@mui/material";
+import { Container, Box, Typography } from "@mui/material";
 // import icon1 from "../assets/fonts/linea-basic-10.svg"
 
 const Features = () => {
   return (
     <section className="section-features">
       <Container className="container">
-        <Grid container spacing={4} className="row">
-          <Grid item xs={12} sm={6} md={3} className="feature-card">
+        <Box container spacing={4} className="row">
+          <Box item xs={12} sm={6} md={3} className="feature-card">
             <Box className="feature-box" textAlign="center">
               <Box component="i" className="feature-box-icon icon-basic-world"></Box>
               <Typography variant="h6" className="heading-tertiary">
@@ -18,8 +18,8 @@ const Features = () => {
                 Aperiam, ipsum sapiente aspernatur.
               </Typography>
             </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className="feature-card">
+          </Box>
+          <Box item xs={12} sm={6} md={3} className="feature-card">
             <Box className="feature-box" textAlign="center">
               <i className="feature-box-icon icon-basic-compass"></i>
               <Typography variant="h6" className="heading-tertiary">
@@ -30,8 +30,8 @@ const Features = () => {
                 Aperiam, ipsum sapiente aspernatur.
               </Typography>
             </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className="feature-card">
+          </Box>
+          <Box item xs={12} sm={6} md={3} className="feature-card">
             <Box className="feature-box" textAlign="center">
               <i className="feature-box-icon icon-basic-map"></i>
               <Typography variant="h6" className="heading-tertiary">
@@ -42,8 +42,8 @@ const Features = () => {
                 Aperiam, ipsum sapiente aspernatur.
               </Typography>
             </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3} className="feature-card">
+          </Box>
+          <Box item xs={12} sm={6} md={3} className="feature-card">
             <Box className="feature-box" textAlign="center">
               <i className="feature-box-icon icon-basic-heart"></i>
               <Typography variant="h6" className="heading-tertiary">
@@ -54,8 +54,8 @@ const Features = () => {
                 Aperiam, ipsum sapiente aspernatur.
               </Typography>
             </Box>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </section>
   );

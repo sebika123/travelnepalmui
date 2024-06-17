@@ -27,7 +27,7 @@
 
   &-navigation {
     border-top: 1px solid $color-grey-dark;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     display: inline-block;
     width: 100%;
 
@@ -37,11 +37,16 @@
 
     @media (max-width: 992px) {
       padding-top: 1rem;
+ 
     }
 
     @media (max-width: 576px) {
       padding-top: 0.5rem;
       flex-direction: column;
+      margin-right: 50px;
+   
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -111,8 +116,9 @@
 
   @media (max-width: 576px) {
     font-size: 1.2rem;
+   
     line-height: 1.8rem;
     // align-items: center;
-    align-content: center;
+   justify-content: center;
   }
 }

@@ -1,26 +1,26 @@
 import React from 'react';
 import { Container, Grid, Box, Typography, Card, CardMedia, CardContent, CardActions, IconButton } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 import i1 from "../assets/images/i1.jpg";
 import i2 from "../assets/images/i2.webp"
 import videobg from "../assets/videos/video.mp4"
 
 
-const theme = createTheme({
-  components: {
-    MuiContainer: {
-      styleOverrides: {
-        root: {
-          '&.story': {
-            maxWidth: '1200px', 
-            width: '100%',
-          },
+// const theme = createTheme({
+//   components: {
+//     MuiContainer: {
+//       styleOverrides: {
+//         root: {
+//           '&.story': {
+//             maxWidth: '1200px', 
+//             width: '100%',
+//           },
           
-        },
-      },
-    },
-  },
-});
+//         },
+//       },
+//     },
+//   },
+// });
 
 
 const Stories = () => {
@@ -38,10 +38,10 @@ const Stories = () => {
         <Typography variant="h4" className="heading-secondary">We make people genuinely happy</Typography>
       </Box>
 
-     <ThemeProvider theme={theme}>
+     {/* <ThemeProvider theme={theme}> */}
      <Container className="container">
-        <Grid container spacing={4} className="row">
-          <Grid item xs={12} md={10} className="story">
+        <Box  className="row">
+          <Box  className="story">
             <Card className="story-card">
               <Box className="story-shape">
                 <CardMedia
@@ -54,15 +54,15 @@ const Stories = () => {
               </Box>
               <CardContent className="story-text">
                 <Typography variant="h5" className="heading-tertiary">I had the best week ever with my family</Typography>
-                <Typography>
+                <Typography variant="body1">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis
                   consequatur ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero repellat quis
                   consequatur ducimus quam nisi exercitationem omnis earum qui.
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
-          <Grid item xs={12} md={10} className="story">
+          </Box>
+          <Box item xs={12} md={10} className="story">
             <Card className="story-card">
               <Box className="story-shape">
                 <CardMedia
@@ -82,10 +82,10 @@ const Stories = () => {
                 </Typography>
               </CardContent>
             </Card>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
-     </ThemeProvider>
+     {/* </ThemeProvider> */}
     </section>
   );
 };
