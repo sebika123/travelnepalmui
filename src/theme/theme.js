@@ -2,6 +2,17 @@
 import { createTheme } from '@mui/material/styles';
 
 const globalTheme = createTheme({
+    palette: {
+        primary: {
+          main: '#1976d2', //primary
+        },
+        secondary: {
+          main: '#dc004e', //secondary
+        },
+        background: {
+          default: '#f5f5f5', // default
+        },
+      },
   typography: {
     fontFamily: 'Arial, sans-serif',
     h1: {
@@ -13,6 +24,13 @@ const globalTheme = createTheme({
       fontWeight: 400,
     },
 
+  },
+  MuiAppBar: {
+    styleOverrides: {
+      root: {
+        backgroundColor: '#333', 
+      },
+    },
   },
 });
 

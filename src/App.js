@@ -6,6 +6,7 @@ import Banner from './components/Banner';
 import Features from './components/Features';
 import Stories from './components/Stories';
 import Footer from './components/Footer';
+import { CssBaseline } from '@mui/material';
 
 const storiesTheme = createTheme({
   typography: {
@@ -16,12 +17,16 @@ const storiesTheme = createTheme({
     },
    
   },
+ 
 });
+
 
 function App() {
   return (
     <ThemeProvider theme={globalTheme}>
-        <div className="App">
+   <CssBaseline/>
+
+   <div className="App">
     <Navbar/>
     <Banner/>
     <Features/>
